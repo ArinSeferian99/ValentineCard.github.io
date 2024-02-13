@@ -1,5 +1,5 @@
-function openImage() {
-    const imageSrc = 'path_to_your_image.jpg'; // Replace 'path_to_your_image.jpg' with the actual path to your image
+function openImage(event) {
+    const imageSrc = 'your_image.jpg'; // Replace 'your_image.jpg' with the actual path to your image
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('image-container');
     
@@ -16,4 +16,5 @@ function openImage() {
     imageContainer.appendChild(closeButton);
     
     document.body.appendChild(imageContainer);
+    event.stopPropagation(); // Prevent the click event from bubbling up to the parent element
 }
